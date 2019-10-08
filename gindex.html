@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Yang的个人主页</title>
+    <meta name="keywords" content="Yang" />
+    <meta name="description" content="技术博客" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/all.css" rel="stylesheet"> <!--引用相应的css文件-->
+
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="/"><img src="images/logo.png"></a></div>
+      <nav id="nav">
+        <ul>
+          <li><a href="gindex.html">首页</a></li>
+          <li><a href="gabout.html">关于作者</a></li>
+        </ul>
+      </nav>  
+      <script>
+        window.onload = function ()
+        {
+        var obj=null;
+        var As=document.getElementById('nav').getElementsByTagName('a');
+        obj = As[0];
+        for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+        obj=As[i];}
+        obj.id='selected'
+         }
+      </script>
+    </header>
+    <div class="mnav">
+      <ul>
+        <li><a href="gindex.html">首页</a></li>
+        <li><a href="gabout.html">关于作者</a></li>
+      </ul>
+    </div>
+    <article>
+        <div class="l_box">
+            <div class="about_me">
+              <ul>
+                <i><img src="images/head.jpg"></i>
+                <p>一枚菜鸡工科生</p>
+              </ul>
+            </div>
+        </div>
+        <div class="r_box">
+          <!--用于在首页增加博文链接-->
+          <li>  
+            <h3><a href="/">lalal</a></h3>
+            <p>第一篇</p>
+          </li>
+          <div class="pagelist"><a class="allpage">&nbsp;<a href="#" onclick="page(2)">仅此一页</a></div>
+        </div>
+ 
+
+    </article>
+    <footer>
+           <p>Designed by Yang</p>
+    </footer> 
+  </body>
+
+</html>
