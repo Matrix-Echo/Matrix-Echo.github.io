@@ -48,8 +48,29 @@
         </div>
         <div class='r_box'>
 
-                <embed src="../blogPdf/blog1Pdf.pdf" width="600" height="800" ></embed><!--确定pdf宽与高-->
-
+                <h3 style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Python实现RTSP和RTP传输视频过程中遇到的若干问题</h3>
+<p style="text-align: left;">&nbsp;&nbsp;&nbsp; 这次计算机网络作业要实现的是RTSP和RTP传输一段视频。代码的主体部分已经给出，我只需完成Client的RTSPsent部分以及serverWorker中的RTSPreply部分。不过由于源代码client端和server端有些不对应，加上有需要python2 to 3的部分，所以还是遇到了一些小问题。</p>
+<p>&nbsp;</p>
+<p>1、RTSP and RTP</p>
+<p>&nbsp;</p>
+<p>RTSP发起/终结流媒体</p>
+<p>&nbsp;</p>
+<p>RTP传输流媒体数据</p>
+<p>&nbsp;</p>
+<p>2、报错 <strong>TypeError: 'module' object is not callable</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>解决：</p>
+<p>import module 和 from module import method有不同</p>
+<p>若用前者，程序主体中要用 module.method 的格式调用方法；</p>
+<p>若用后者，则直接用 method 调用方法</p>
+<p>&nbsp;</p>
+<p>3、import的地方报错 <strong>unexpected indent </strong>(出现&ldquo;意外缩进&rdquo;)</p>
+<p>&nbsp;</p>
+<p>解决：</p>
+<p>这里不是指import语句本身有意外缩进，而是指要import的文件出现了意外缩进</p>
+<p>&nbsp;</p>
+<p>4、cmd中 cd 无法直接进入不在当前所在盘的文件夹，需要先（如d:)换盘后再 cd</p>
+<p>&nbsp;</p>
         </div>
  
 
