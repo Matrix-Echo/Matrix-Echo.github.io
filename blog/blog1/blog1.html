@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Yang的个人主页</title>
+    <meta name="keywords" content="Yang" />
+    <meta name="description" content="技术博客" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../css/all.css" rel="stylesheet"> <!--引用相应的css文件-->
+
+
+  </head>
+  <body>
+    <header>
+      <div class="logo"><a href="/"><img src="../images/logo.png"></a></div>
+      <nav id="nav">
+        <ul>
+          <li><a href="../../index.html">首页</a></li>
+          <li><a href="../../about.html">关于作者</a></li>
+        </ul>
+      </nav>  
+      <script>
+        window.onload = function ()
+        {
+        var obj=null;
+        var As=document.getElementById('nav').getElementsByTagName('a');
+        obj = As[0];
+        for(i=1;i<As.length;i++){if(window.location.href.indexOf(As[i].href)>=0)
+        obj=As[i];}
+        obj.id='selected'
+         }
+      </script>
+    </header>
+    <div class="mnav">
+      <ul>
+        <li><a href="../../index.html">首页</a></li>
+        <li><a href="../../about.html">关于作者</a></li>
+      </ul>
+    </div>
+    <article>
+        <div class="l_box">
+            <div class="about_me">
+              <ul>
+                <i><img src="../../images/head.jpg"></i>
+                <p>一枚菜鸡工科生</p>
+              </ul>
+            </div>
+        </div>
+        <div class='r_box'>
+
+          <h3 style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Python实现RTSP和RTP传输视频过程中遇到的若干问题</h3>
+<p style="text-align: left;">&nbsp;&nbsp;&nbsp; 这次计算机网络作业要实现的是RTSP和RTP传输一段视频。代码的主体部分已经给出，我只需完成Client的RTSPsent部分以及serverWorker中的RTSPreply部分。不过由于源代码client端和server端有些不对应，加上有需要python2 to 3的部分，所以还是遇到了一些小问题。</p>
+<p>&nbsp;</p>
+<p>1、RTSP and RTP</p>
+<p>&nbsp;</p>
+<p>RTSP发起/终结流媒体</p>
+<p>&nbsp;</p>
+<p>RTP传输流媒体数据</p>
+<p>&nbsp;</p>
+<p>2、报错 <strong>TypeError: 'module' object is not callable</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>解决：</p>
+<p>import module 和 from module import method有不同</p>
+<p>若用前者，程序主体中要用 module.method 的格式调用方法；</p>
+<p>若用后者，则直接用 method 调用方法</p>
+<p>&nbsp;</p>
+<p>3、import的地方报错 <strong>unexpected indent </strong>(出现&ldquo;意外缩进&rdquo;)</p>
+<p>&nbsp;</p>
+<p>解决：</p>
+<p>这里不是指import语句本身有意外缩进，而是指要import的文件出现了意外缩进</p>
+<p>&nbsp;</p>
+<p>4、cmd中 cd 无法直接进入不在当前所在盘的文件夹，需要先（如d:)换盘后再 cd</p>
+<p>&nbsp;</p>
+
+        </div>
+ 
+
+    </article>
+    <footer>
+           <p>Designed by Yang</p>
+    </footer> 
+  </body>
+
+</html>
